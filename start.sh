@@ -17,7 +17,7 @@ if [ -d ../gateway-remote-config ]; then
     # And then try to refresh the gateway EUI and re-link local_conf.json
 
     # Same eth0/wlan0 fallback as on install.sh
-    GATEWAY_EUI_NIC="eth0"
+    GATEWAY_EUI_NIC="wlan0"
     if [[ `grep "$GATEWAY_EUI_NIC" /proc/net/dev` == "" ]]; then
         GATEWAY_EUI_NIC="wlan0"
     fi
